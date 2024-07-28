@@ -8,7 +8,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-
 body {font-family: Times New Roman;
       font-weight: bold;
       background-color: #A1AEB1;
@@ -17,6 +16,8 @@ body {font-family: Times New Roman;
       background-position:top center;
       background-repeat:no-repeat;
       background-size:100% auto}
+
+
 
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
@@ -29,28 +30,29 @@ body {font-family: Times New Roman;
       background-color: #301934;
       padding: 25px;
     }
-
+    
     /* Change background color of buttons on hover */
-    .tab button:hover {
-     background-color: #ddd;
-    }
+.tab button:hover {
+  background-color: #ddd;
+}
 
 /* Create an active/current tablink class */
-    .tab button.active {
-     background-color: #ccc;
-    }
+.tab button.active {
+  background-color: #ccc;
+}
 
 /* Style the tab content */
-    .tabcontent {
-    line-height: 2em;
-    display: none;
-    padding: 6px 6px;
-    border: 10px solid #ccc;
-    border-right: 15px solid #ccc;
-    border-top: 10px solid #ccc;
-    margin: 30px 100px; 
-    }
+.tabcontent {
+  line-height: 2em;
+  display: none;
+  padding: 6px 6px;
+  border: 10px solid #ccc;
+  border-right: 15px solid #ccc;
+  border-top: 10px solid #ccc;
+  margin: 30px 100px; 
+}
 
+  
   </style>
 </head>
 <body>
@@ -69,57 +71,53 @@ body {font-family: Times New Roman;
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
       </ul>
-
-      <div class="tab">
-        <button class="tablinks" onclick="Information(event, 'About')">About</button>
-        <button class="tablinks" onclick="Information(event, 'Gallery')">Gallery</button>
-        <button class="tablinks" onclick="Information(event, 'Contact')">Contact</button>
-      </div>
-
-      <div id="About" class="tabcontent">
-        <h3><font color="#FFFFFF">About</font></h3>
-          <p><font color="#FFFFFF"> 
+        <div class="tab">
+          <button class="tablinks" onclick="Information(event, 'About')">About</button>
+          <button class="tablinks" onclick="Information(event, 'Gallery')">Gallery</button>
+          <button class="tablinks" onclick="Information(event, 'Contact')">Contact</button>
+        </div>
+        <div id="About" class="tabcontent">
+          <h3><font color="#FFFFFF">About</font></h3>
+  		  <p><font color="#FFFFFF">
             My name is Alan Pinedo, I am a Physics Bachelor who is aspiring to work in Digitial Electronics.<br>
-            More specifically, to work with FPGA's and utilize Verilog HDL to program.<br>
-            Verilog aside, I also have used Python and Mathematica. <br> 
-            Below are some of my personal and class projects that I have done in Verilog and Python, with more emphasis on the Verilog ones.</font> </p> 
-      </div>
+          						   More specifically, to work with FPGA's and utilize Verilog HDL to program.<br>
+                                   Verilog aside, I also have used Python and Mathematica. <br> 
+                                   Below are some of my personal and class projects that I have done in Verilog and Python, with more emphasis on the Verilog ones.</font> </p> 
+        </div>
 
-      <div id="Gallery" class="tabcontent">
-          <h3><font color="#FFFFFF">Gallery</font></h3>
-          <p><font color="#FFFFFF">Funny dog</font> </p> 
+		<div id="Gallery" class="tabcontent">
+  		  <h3><font color="#FFFFFF">Gallery</font></h3>
+  		  <p><font color="#FFFFFF">Funny dog</font> </p> 
           <img src="https://i.imgur.com/m6Ph0nR.jpeg" width="400" height="300" alt="dog picture">
-      </div>
+		</div>
 
-      <div id="Contact" class="tabcontent">
-          <h3><font color="#FFFFFF">Contact</font></h3>
-          <p><font color="#FFFFFF"> 
-            Email: arpinedo01@gmail.com <br>
-            LinkedIn: <a href="https://www.linkedin.com/in/alan-pinedo-3320a7245"> LinkedIn link </a>  <br>
-            Indeed: <a href="https://profile.indeed.com/p/alanp-fzpqkqj"> Indeed link </a><br> 
-            Handshake: <a href="https://app.joinhandshake.com/profiles/18209016"> Handshake Profile link </a> </font> </p> 
-      </div>
-
-
-  <script>
-    function Information(evt, content) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(content).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-  </script>
-
-  </div>
-    <p style="color:blue"> <br><br><br> Last updated: 7/28/2024 <p>
-  </div>
+		<div id="Contact" class="tabcontent">
+  	      <h3><font color="#FFFFFF">Contact</font></h3>
+          <p><font color="#FFFFFF">Email: arpinedo01@gmail.com <br>
+          						   LinkedIn: <a href="https://www.linkedin.com/in/alan-pinedo-3320a7245"> LinkedIn link </a>  <br>
+                                     Indeed: <a href="https://profile.indeed.com/p/alanp-fzpqkqj"> Indeed link </a><br> 
+                                  Handshake: <a href="https://app.joinhandshake.com/profiles/18209016"> Handshake Profile link</a> </font> </p> 
+		</div>
+        
+        <script>
+          function Information(evt, content) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(content).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+		</script>
+      
+     </div>
+        <p style="color:blue"> <br><br><br> Last updated: 7/28/2024 <p>
+     </div>
     </div>
 </nav>
 
@@ -132,7 +130,7 @@ body {font-family: Times New Roman;
   <div class="container text-center">
     <h1>Alan Pinedo</h1>      
     <p>Portfolio</p>
-      <img src="https://i.imgur.com/GOMRunY.png" alt="Cool Shark" width="500" height="500" >
+    <img src="https://i.imgur.com/GOMRunY.png" width="500" height="500" alt="Cool Shark" >
   </div>
 </div>
   
@@ -140,7 +138,7 @@ body {font-family: Times New Roman;
   <h3>Links to Projects</h3><br>
   <div class="row">
     <div class="col-sm-3">
-      <p>RS-232 Decoder designed in Verilog</p>
+      <p> RS-232 Decoder designed in Verilog </p>
       <a href="https://github.com/apine01/RS-232_Decoder.git"> RS-232 Decoder Verilog files </a> 
       <img src="https://i.imgur.com/2vXvnwN.png" width="400" height="300" alt="RS-232 png"> 
     </div>
@@ -165,9 +163,9 @@ body {font-family: Times New Roman;
 <div class="container-fluid bg-3 text-center">    
   <div class="row">
     <div class="col-sm-3">
-      <p>Python Scripts made during UCSB course</p>
-      <a href="https://github.com/apine01/UCSB-Files-Scripts.git"> UCSB Pythons Script files </a>
-      <img src="https://i.imgur.com/wrxLRbT.png" width="400" height="300" alt="Lobster with Python symbol">
+      <p>Python Scripts made during UCSB course </p>
+      <a href="https://github.com/apine01/UCSB-Files-Scripts.git"> UCSB Pythons Script files </a> 
+      <img src="https://i.imgur.com/wrxLRbT.png" width="400" height="300" alt="Image">
     </div>
   </div>
 </div><br><br>
